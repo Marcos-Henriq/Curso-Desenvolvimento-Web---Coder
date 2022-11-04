@@ -1,19 +1,27 @@
-const soma = function (x,y) {
-return y + x;
-}
-const subtrair = function (maior,menor){
-    maior = maior < menor ? menor : maior;
-    menor = maior < maior ? maior : menor;
-    
-    return maior - menor;
+const soma = function (x, y) {
+    return x + y;
+};
+
+const imprimirResultado = function (a, b, operacao = soma) {
+    console.log(operacao(a, b));
 }
 
-// função anonima função sem nome;
+imprimirResultado(2, 3);
 
-const imprimirResultado = function(a,b, operacao = soma){
-    console.log(operacao(a,b));
-} 
+const subtrair = function (a, b) {
+    return a - b;
+}
 
-imprimirResultado(3,5);
-imprimirResultado(20,2,subtrair);
+imprimirResultado(10, 5, subtrair);
 
+imprimirResultado(10, 8, (a, b) => {
+    return a + b;
+})
+
+const pessoa = {
+    falar: function () {
+        console.log("Olá");
+    }
+}
+
+pessoa.falar();
