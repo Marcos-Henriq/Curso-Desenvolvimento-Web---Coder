@@ -1,9 +1,8 @@
-const fabricantes =  ["Mercedes","Audi","BMW"];
+const fabricantes = ['Mercedes', 'Audi', 'Nissan'];
 
-function imprimir(nome,indice){
-    console.log(`${indice + 1}. ${nome}`);
+function imprimir(nome, indice) {
+    console.log(`${indice + 1}: ${nome}`);
 }
 
 fabricantes.forEach(imprimir);
-fabricantes.forEach(fabricante => console.log(fabricante));
-
+fabricantes.forEach(fabricantes => console.log(fabricantes));
