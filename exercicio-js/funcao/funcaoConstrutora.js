@@ -1,26 +1,26 @@
 function Carro(velocidadeMaxima = 200, delta = 5){
-    // atributo pivado
+    // atributo pŕivado
     let velocidadeAtual = 0;
 
-    // metodo publico 
+    //metodo publico
     this.acelerar = function (){
         if(velocidadeAtual + delta <= velocidadeMaxima){
-            velocidadeAtual +=delta;
-        }
-        else{
-            velocidadeAtual == velocidadeMaxima;
+            velocidadeAtual += delta;
+        }else{
+            velocidadeAtual = velocidadeMaxima;
         }
     }
 
     //metodo publico
-    this.getVelocidadeAtual = function (){
+    this.getVelocidadeAtual = function(){
         return velocidadeAtual;
     }
-
 }
+
 
 const uno = new Carro
 
-uno.acelerar();
+uno.getVelocidadeAtual();
 
-console.log(uno.getVelocidadeAtual);
+console.log(uno.getVelocidadeAtual());
+
